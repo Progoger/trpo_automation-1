@@ -8,6 +8,6 @@ os: linux
 cache: pip
 before_install: cd email/18-ISbo-2b
 install:
-  - pip install
+  - pip install -r requirements.txt
 script:
   - python -m unittest discover -v
