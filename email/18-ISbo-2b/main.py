@@ -7,6 +7,7 @@ from main_4_FormAnswers import FormAnswers
 from main_5_InformUsers import InformUsers
 import config_Project as cfg
 from work_Loger import Logs
+from logs import config_Log 
 
 import inspect
 # from datetime import datetime
@@ -23,6 +24,8 @@ def main():
 
     # Запуск работы
     while True:
+	# Создание файла логов
+	config_Log.logger.createlogfile()
         print(next(cfg.gen_num_for_filename))
 
         # main_1
@@ -52,6 +55,9 @@ def main():
 
         # main_5
         InformUsers(answers)
+	
+	#Закрытие файла логов
+	config_Log.logger.closelogfile()
 
 
 # Вызов начальной функции
