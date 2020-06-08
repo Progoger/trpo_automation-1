@@ -1,0 +1,13 @@
+branches:
+  only:
+  - master
+  - 18-ISbo-2b
+  - dev
+language: python
+os: linux
+cache: pip
+before_install: cd email/18-ISbo-2b
+install:
+  - pip install
+script:
+  - python -m unittest discover -v
